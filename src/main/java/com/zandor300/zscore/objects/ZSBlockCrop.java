@@ -1,6 +1,7 @@
 package com.zandor300.zscore.objects;
 
 import com.zandor300.zscore.ZSCore;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -38,6 +39,8 @@ public class ZSBlockCrop extends BlockCrops implements IGrowable {
 		disableStats();
 
 		this.modid = modid.toLowerCase();
+
+		GameRegistry.registerBlock(this, getUnlocalizedName());
 	}
 
 	@Override

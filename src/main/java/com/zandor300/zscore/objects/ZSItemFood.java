@@ -1,6 +1,7 @@
 package com.zandor300.zscore.objects;
 
 import com.zandor300.zscore.ZSCore;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -21,6 +22,8 @@ public class ZSItemFood extends ItemFood {
 		this.setCreativeTab(tab);
 
 		this.modid = modid.toLowerCase();
+
+		GameRegistry.registerItem(this, getUnlocalizedName());
 	}
 
 	@Override
